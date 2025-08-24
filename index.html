@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Rubis</title>
+    <style>
+       .game-wrap {
+        width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="game-wrap">
+        <div id="game"></div>
+    </div>
+    <script>
+        var gameTmp = document.querySelector('#game');
+        window.addEventListener('load', function() {
+            gameTmp.dataset.gamename = "pokemon-rubis-en.gba";
+            gameTmp.dataset.core= "gba";
+            const script = document.createElement("script");
+            script.setAttribute("src", "ejs.js")
+            document.body.appendChild(script);
+
+        })
+    </script>
+    <script src="games.js"></script>
+</body>
+</html>
